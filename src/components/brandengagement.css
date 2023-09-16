@@ -1,0 +1,13 @@
+.brand-engagement {
+  display: flex;
+}
+.brand-engagement__text {
+}
+/*.brand-engagement__text h3 {*/
+/*  text-transform: uppercase;*/
+/*  font-weight: 700;*/
+/*}*/
+.brand-engagement img {
+  max-height: 400px;
+  max-width: 400px;
+}
