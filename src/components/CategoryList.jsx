@@ -1,4 +1,4 @@
-import { getAllCategories } from "../handleData.js";
+import { getAllCategories } from "../data/handleData.js";
 import { Link } from "react-router-dom";
 const CategoryList = () => {
   const categories = getAllCategories();
@@ -10,7 +10,8 @@ const CategoryList = () => {
           {category}
         </Link>
       ))}
-      ;
+      <br />
+      <br />
     </>
   );
 };

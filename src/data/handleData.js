@@ -1,4 +1,4 @@
-import data from "./updatedData.json";
+import data from "./data.json";
 
 export function getProductsBySlug(slug) {
   return data.filter((elem) => elem.slug === slug);

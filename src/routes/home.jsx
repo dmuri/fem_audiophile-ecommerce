@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div>
-      Home
       <br />
       <br />
-      <Link to="/product/zx9-speaker">LINK</Link>
+      <Link to="/product/zx9-speaker">FEATURES PRODUCT</Link>
       <br />
       <br />
       <CategoryList />
