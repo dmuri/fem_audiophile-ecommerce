@@ -6,7 +6,9 @@ const Home = () => {
     <div>
       <br />
       <br />
-      <Link to="/product/zx9-speaker">FEATURES PRODUCT</Link>
+      <Link className="uppercase" to="/product/xx99-mark-two-headphones">
+        XX99 Mark II Headphones
+      </Link>
       <br />
       <br />
       <CategoryList />

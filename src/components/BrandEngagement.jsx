@@ -2,7 +2,7 @@
 const BrandEngagement = () => {
   return (
     <>
-      <div className="brand-engagement | flex flex-col lg:flex-row justify-items-center">
+      <div className="brand-engagement | flex flex-col items-center lg:items-start lg:flex-row justify-items-center">
         {/*  TODO: Change heading*/}
         <div className="brand-engagement__text | flex-1">
           <h3 className="text-2xl uppercase">
@@ -15,12 +15,11 @@ const BrandEngagement = () => {
             accessories. We have a large showroom and luxury demonstration rooms
             available for you to browse and experience a wide range of our
             products. Stop by our store to meet some of the fantastic people who
-            make Audiophile the best place to buy your portable audio
-            equipment.p
+            make Audiophile the best place to buy your portable audio equipment.
           </p>
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 max-w-sm ">
           <picture>
             <source
               media="(max-width: 480px)"
@@ -31,7 +30,7 @@ const BrandEngagement = () => {
               srcSet="/assets/shared/tablet/image-best-gear.jpg"
             />
             <img
-              className="brand-engagement__image | mx-auto max-w-md"
+              className="brand-engagement__image | mx-auto"
               src="/assets/shared/desktop/image-best-gear.jpg"
               alt="Responsive content"
             />

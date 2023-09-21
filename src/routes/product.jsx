@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom";
 import { getProductsBySlug } from "../data/handleData.js";
 import { useState } from "react";
+import useStore from "../store/index.js"; // Adjust the path accordingly
 
 const Product = () => {
   const [quantity, setQuantity] = useState(0);
   const product = getProductsBySlug(useParams().slug);
+
+  const addProductToCart = useStore((state) => state.addProductToCart); // Extract the action
 
   function handleIncrement() {
     setQuantity((prev) => prev + 1);
@@ -13,6 +16,11 @@ const Product = () => {
     setQuantity((prev) => prev - 1);
   }
 
+  const handleAddToCart = (product) => {
+    // console.log(product);
+    addProductToCart({ ...product, quantity }); // Note: We're passing the quantity here
+    setQuantity(0); // Reset the local state quantity after adding to cart
+  };
   return (
     <>
       {product.map((p) => (
@@ -28,10 +36,13 @@ const Product = () => {
           <p>{p.features}</p>
           <br />
           <br />
-          <button>Add to Cart</button>
+          <button onClick={() => handleAddToCart(p)}>
+            Add {quantity} to Cart
+          </button>
+          <br />
+          <br />
           <p>Amount: {quantity}</p>
-          <button onClick={handleDecrement}>Dec</button>
-          <button onClick={handleIncrement}>Inc</button>
+          <button onClick={handleIncrement}>Increment</button>
           <br />
           <br />
         </div>

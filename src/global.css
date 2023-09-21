@@ -1,3 +1,92 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+/*Utility classes*/
+.text-56 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 3.625rem;
+  letter-spacing: 0.125rem;
+}
+
+.text-40 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2.75rem;
+  letter-spacing: 0.09375rem;
+}
+
+.text-32 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2.25rem;
+  letter-spacing: 0.071875rem;
+}
+
+.text-28 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2.375rem;
+  letter-spacing: 0.125rem;
+}
+
+.text-24 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2.0625rem;
+  letter-spacing: 0.10625rem;
+}
+
+.text-18 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+  letter-spacing: 0.08125rem;
+}
+
+.text-14 {
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1.1875rem;
+  letter-spacing: 0.625rem;
+}
+
+/* Font Size 13rem */
+.text-13 {
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.5625rem;
+  letter-spacing: 0.0625rem;
+}
+
+.text-12 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1rem;
+  letter-spacing: -0.0134rem;
+  text-align: left;
+}
