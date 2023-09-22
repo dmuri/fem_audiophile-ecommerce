@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Page layout */
 #root {
   min-height: 100vh;
   position: relative;
