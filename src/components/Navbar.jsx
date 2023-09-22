@@ -1,11 +1,10 @@
-import "./navbar.css";
 import Cart from "./Cart.jsx";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <header>
-      <nav className="navbar | md:flex hidden justify-between bg-black">
+    <header className="bg-black flex justify-center">
+      <nav className="hidden md:flex flex-grow justify-between max-w-[70em]">
         {/*<img className="logo" src="/assets/shared/desktop/logo.svg" alt="logo" />*/}
 
         <svg width="143" height="25" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +14,7 @@ const Navbar = () => {
             fillRule="nonzero"
           />
         </svg>
-        <ul className="flex gap-3 text-white uppercase">
+        <ul className="flex justify-center flex-grow gap-3 text-white uppercase">
           <li>
             <Link to={"/"}>Home</Link>
           </li>
@@ -29,7 +28,7 @@ const Navbar = () => {
             <Link to={"/category/earphones"}>earphones</Link>
           </li>
         </ul>
-        <div>CART</div>
+        <div className="text-white">CART</div>
         {/*<Cart />*/}
       </nav>
     </header>
