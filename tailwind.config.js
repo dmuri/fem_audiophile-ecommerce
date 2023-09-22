@@ -10,6 +10,7 @@ export default {
       colors: {
         "custom-orange-d8": "#D87D4A",
         "custom-orange-fb": "#fbaf85",
+        "custom-error": "#CD2C2C",
         charcoal: "#101010",
         black: "#000000",
         "gray-100": "#FAFAFA",

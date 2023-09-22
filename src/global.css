@@ -90,3 +90,27 @@ body {
   letter-spacing: -0.0134rem;
   text-align: left;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="radio"] {
+  appearance: none;
+  display: none;
+}
+
+input:focus {
+  outline: 1px solid #d87d4a;
+}
+
+input:hover {
+  outline: 1px solid #fbaf85;
+}
