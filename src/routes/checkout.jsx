@@ -24,7 +24,7 @@ const Checkout = () => {
   const shipping = 50;
   const formattedGrandTotal = Math.round(shipping + total).toLocaleString();
 
-  const [showThankYou, setShowThankYou] = useState(true);
+  const [showThankYou, setShowThankYou] = useState(false);
   const onSubmit = (data) => {
     console.log(data);
     setShowThankYou(true);

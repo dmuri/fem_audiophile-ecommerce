@@ -2,6 +2,12 @@
 const BrandEngagement = () => {
   return (
     <>
+      {/* <div className="w-[1000px]">
+        <div className="grid max-w-700px">
+          <div className="bg-red-100"></div>
+          <div className="bg-blue-100"></div>
+        </div>
+      </div> */}
       <div className="brand-engagement | flex flex-col items-center lg:items-start lg:flex-row justify-items-center">
         {/*  TODO: Change heading*/}
         <div className="brand-engagement__text | flex-1">

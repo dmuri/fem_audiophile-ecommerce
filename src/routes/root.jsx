@@ -9,7 +9,6 @@ const Root = () => {
     <>
       <Navbar />
       <main>
-        <Cart />
         <Outlet />
         <BrandEngagement />
       </main>
