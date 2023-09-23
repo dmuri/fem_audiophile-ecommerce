@@ -22,7 +22,7 @@ const Navbar = () => {
 
   const navigate = useNavigate();
   return (
-    <header className="bg-black flex justify-center py-9">
+    <header className="bg-black flex justify-center py-7">
       <nav className=" flex-grow flex md:justify-between items-center max-w-[70em]">
         <button
           onClick={() => setMobileNavToggle(!mobileNavToggle)}

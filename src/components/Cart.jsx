@@ -1,8 +1,10 @@
 import useStore from "../store/index.js";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import CategoryList from "./CategoryList";
 
 const Cart = () => {
+  const navigate = useNavigate();
   const cart = useStore((state) => state.cart);
   const removeProductFromCart = useStore(
     (state) => state.removeProductFromCart
@@ -10,15 +12,15 @@ const Cart = () => {
   const clearCart = useStore((state) => state.clearCart);
   const incrementQuantity = useStore((state) => state.incrementProductQuantity);
   const decrementQuantity = useStore((state) => state.decrementProductQuantity);
+  const total = useStore((state) => state.getFormattedTotal(state));
 
   const [isOpen, setIsOpen] = useState(false);
 
-  // useEffect(() => {
-  //   console.log("Cart: ", cart);
-  // }, [cart]);
-  //
   return (
-    <div className="text-white relative ml-auto">
+    <div className="relative ml-auto">
+      {cart.length > 0 && (
+        <div className="absolute top-[4px] right-[3px] w-4 h-4 rounded-full bg-custom-orange-d8"></div>
+      )}
       <button
         className="group hover:fill-custom-orange-d8 mx-auto p-3 "
         aria-label="cart-toggle"
@@ -33,33 +35,89 @@ const Cart = () => {
           />
         </svg>
       </button>
+
       {isOpen && (
-        <div className="absolute w-40 right-4 top-12 bg-black">
-          {cart.map((product) => (
-            <div key={product.slug}>
-              {product.slug} - {product.price} - {product.quantity}
-              <br />
+        <>
+          <div
+            className="fixed z-10 inset-0 flex flex-col items-center justify-center bg-[rgba(0,0,0,0.4)]"
+            onClick={() => setIsOpen(false)}
+          ></div>
+          <div
+            className="absolute  w-[17rem] sm:w-[23.5rem]   top-20 right-2 z-20 bg-white p-6 rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex justify-between">
+              <p className="text-18">
+                {cart.length > 0 ? `Cart (${cart.length})` : `Cart`}
+              </p>
               <button
-                onClick={() => incrementQuantity(product.slug)}
-                className="p-1"
+                aria-label="Clear cart"
+                onClick={clearCart}
+                className="opacity-50 hover:text-custom-orange-d8"
               >
-                +
-              </button>
-              <button
-                onClick={() => decrementQuantity(product.slug)}
-                className="p-1"
-              >
-                -
-              </button>
-              <button onClick={() => removeProductFromCart(product.slug)}>
-                Remove
+                Remove Cart
               </button>
             </div>
-          ))}
-          <button onClick={clearCart}>Clear Cart</button>
-          <br />
-          <Link to="/checkout">CHECKOUT</Link>
-        </div>
+            {cart.map((product) => (
+              <div className=" flex gap-4 my-4 items-center" key={product.slug}>
+                <img
+                  className="h-8 w-8 sm:h-16 sm:w-16 rounded-lg"
+                  src={`/assets/cart/image-${product.slug}.jpg`}
+                  alt=""
+                />
+                <div className="">
+                  <p className="font-bolder text-md">{product.short}</p>
+                  <p className="font-bolder text-sm opacity-50">
+                    $ {product.price}
+                  </p>
+                </div>
+                <div className="ml-auto flex items-center rounded-md bg-gray-200">
+                  <button
+                    onClick={() => decrementQuantity(product.slug)}
+                    className="px-5 py-2 hover:text-custom-orange-d8 hover:scale-125"
+                  >
+                    -
+                  </button>
+                  <p className="font-bolder text-sm min-w-[14px] ">
+                    {product.quantity}
+                  </p>
+                  <button
+                    onClick={() => incrementQuantity(product.slug)}
+                    className="px-5 py-2 hover:text-custom-orange-d8 hover:scale-125"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            ))}
+            <hr className="mt-5" />
+            {cart.length === 0 ? (
+              <div className="flex justify-center">
+                <p className="text-15 uppercase font-bolder opacity-50 my-8">
+                  Cart is empty
+                </p>
+              </div>
+            ) : (
+              <>
+                <div className="flex justify-between items-center mb-4 mt-8">
+                  <p className="font-bold opacity-50 uppercase">Total</p>
+                  <p className="font-bolder text-lg">$ {total}</p>
+                </div>
+
+                <button
+                  className="bg-custom-orange-d8 text-13 py-3 mt-2 w-full text-white uppercase"
+                  aria-label="Navigate home"
+                  onClick={() => {
+                    setIsOpen(false);
+                    navigate("/checkout");
+                  }}
+                >
+                  Checkout
+                </button>
+              </>
+            )}
+          </div>
+        </>
       )}
     </div>
   );

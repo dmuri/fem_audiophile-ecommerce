@@ -50,7 +50,7 @@ const ThankYou = ({ setShowThankYou, cart, formattedGrandTotal }) => {
               </div>
             ))}
           </div>
-          <div className="flex-1 flex flex-row items-center sm:items-start sm:flex-col justify-center py-3 sm:py-0 px-5 gap-4 bg-black rounded-b-lg sm:rounded-none sm:rounded-r-lg">
+          <div className="flex-1 flex flex-row items-center sm:items-start sm:flex-col justify-center py-3 sm:py-0 px-5 gap-1 bg-black rounded-b-lg sm:rounded-none sm:rounded-r-lg">
             <p className="text-white uppercase opacity-50 ">Grand total</p>
             <p className="text-white font-bolder text-lg">
               $ {formattedGrandTotal}

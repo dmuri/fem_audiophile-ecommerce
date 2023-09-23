@@ -2,23 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Prevent jumping when scroll-bar appears or disappears between routing */
+html {
+  overflow-y: scroll;
+}
 /* Page layout */
 #root {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  /* grid-template-columns: minmax(2rem, 1fr) minmax(0, 70em) minmax(2rem, 1fr); */
 
   min-height: 100vh;
   position: relative;
 }
-
-/* #root > * {
-  grid-column: 2;
-}
-
-main {
-  flex-grow: 1;
-} */
 
 body {
   font-family: "Manrope", sans-serif;

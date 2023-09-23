@@ -9,8 +9,10 @@ const Root = () => {
     <>
       <Navbar />
       <main>
-        <Outlet />
-        <BrandEngagement />
+        <div className="mx-auto max-w-[70rem]">
+          <Outlet />
+          <BrandEngagement />
+        </div>
       </main>
       <Footer />
     </>

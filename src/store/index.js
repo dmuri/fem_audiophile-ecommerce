@@ -5,7 +5,16 @@ const initialState = () => {
   const storedCart = localStorage.getItem("cart");
   return storedCart ? JSON.parse(storedCart) : [];
 };
+const SHIPPING_COST = 50;
+const calculateTotal = (cart) =>
+  cart.reduce(
+    (accumulator, item) => accumulator + item.price * item.quantity,
+    0
+  );
 
+const calculateVAT = (total) => total * 0.2;
+
+const calculateGrandTotal = (total) => SHIPPING_COST + total;
 const useStore = create((set) => ({
   cart: initialState(),
 
@@ -91,6 +100,16 @@ const useStore = create((set) => ({
 
       return state;
     }),
+  getTotal: (state) => calculateTotal(state.cart),
+  getVAT: (state) => calculateVAT(calculateTotal(state.cart)),
+  getGrandTotal: (state) => calculateGrandTotal(calculateTotal(state.cart)),
+  getFormattedTotal: (state) => calculateTotal(state.cart).toLocaleString(),
+  getFormattedVAT: (state) =>
+    Math.floor(calculateVAT(calculateTotal(state.cart))).toLocaleString(),
+  getFormattedGrandTotal: (state) =>
+    Math.round(
+      calculateGrandTotal(calculateTotal(state.cart))
+    ).toLocaleString(),
 }));
 
 export default useStore;
