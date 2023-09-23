@@ -45,20 +45,20 @@ const Checkout = () => {
           />
         )}
 
-        <div className="flex flex-col justify-around mb-12 lg:mb-28 gap-12 lg:flex-row ">
+        <div className="mb-12 flex flex-col justify-around gap-12 lg:mb-28 lg:flex-row">
           <form
-            className="bg-white rounded-2xl p-12 flex-1 md:min-w-[490px] grid grid-cols-[1fr] sm:grid-cols-[1fr_1fr] gap-4"
+            className="grid flex-1 grid-cols-[1fr] gap-4 rounded-2xl bg-white p-12 sm:grid-cols-[1fr_1fr] md:min-w-[490px]"
             onSubmit={handleSubmit(onSubmit)}
             noValidate
           >
-            <p className="sm:col-span-2 text-32 ">Checkout</p>
-            <p className="sm:col-span-2 text-13 text-custom-orange-d8 mt-8">
+            <p className="text-32 sm:col-span-2 ">Checkout</p>
+            <p className="text-13 mt-8 text-custom-orange-d8 sm:col-span-2">
               Billing details
             </p>
             <label className=" font-bolder">
               Name
               <input
-                className={`flex flex-col w-full p-4 border rounded-lg mt-1 font-normal  `}
+                className={`mt-1 flex w-full flex-col rounded-lg border p-4 font-normal  `}
                 type="text"
                 placeholder="Alexei Ward"
                 id="name"
@@ -70,32 +70,32 @@ const Checkout = () => {
                 })}
               />
               {errors.name && (
-                <p className="text-custom-error text-xs my-1">
+                <p className="my-1 text-xs text-custom-error">
                   {errors.name?.message}
                 </p>
               )}
             </label>
             <label className=" font-bolder">
-              <div className="flex justify-between items-end">
+              <div className="flex items-end justify-between">
                 Email Address
               </div>
               <input
-                className="flex flex-col w-full p-4 border rounded-lg mt-1 font-normal"
+                className="mt-1 flex w-full flex-col rounded-lg border p-4 font-normal"
                 {...register("email", {
                   validate: (value) => {
-                    if (!value) return "Email is required"; // If email is not provided
+                    if (!value) return "Email is required";
                     if (
                       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
                     )
-                      return "Invalid email address"; // If email doesn't match the regex
-                    return true; // Valid email
+                      return "Invalid email address";
+                    return true;
                   },
                 })}
                 type="email"
                 placeholder="alexei@mail.com"
               />
               {errors.email && (
-                <p className="text-custom-error text-xs my-1">
+                <p className="my-1 text-xs text-custom-error">
                   {errors.email?.message}
                 </p>
               )}
@@ -103,7 +103,7 @@ const Checkout = () => {
             <label className=" font-bolder">
               Phone Number
               <input
-                className="flex flex-col w-full p-4 border rounded-lg mt-1 font-normal"
+                className="mt-1 flex w-full flex-col rounded-lg border p-4 font-normal"
                 {...register("phone", {
                   required: {
                     value: true,
@@ -113,17 +113,17 @@ const Checkout = () => {
                 placeholder="+47 443 98 836"
                 type="number"
               />
-              <p className="text-custom-error text-xs my-1">
+              <p className="my-1 text-xs text-custom-error">
                 {errors.phone?.message}
               </p>
             </label>
-            <p className="mt-8 sm:col-span-2 text-13 text-custom-orange-d8">
+            <p className="text-13 mt-8 text-custom-orange-d8 sm:col-span-2">
               Shipping info
             </p>
             <label className="font-bolder sm:col-span-2">
               Address
               <input
-                className="flex flex-col w-full p-4 border rounded-lg mt-1 font-normal"
+                className="mt-1 flex w-full flex-col rounded-lg border p-4 font-normal"
                 {...register("address", {
                   required: {
                     value: true,
@@ -132,14 +132,14 @@ const Checkout = () => {
                 })}
                 placeholder="Refstadsvingen 17"
               />
-              <p className="text-custom-error text-xs my-1">
+              <p className="my-1 text-xs text-custom-error">
                 {errors.address?.message}
               </p>
             </label>
             <label className="font-bolder">
               Zip Code
               <input
-                className="flex flex-col w-full p-4 border rounded-lg mt-1 font-normal"
+                className="mt-1 flex w-full flex-col rounded-lg border p-4 font-normal"
                 {...register("zip", {
                   required: {
                     value: true,
@@ -149,14 +149,14 @@ const Checkout = () => {
                 placeholder="0584"
                 type="number"
               />
-              <p className="text-custom-error text-xs my-1">
+              <p className="my-1 text-xs text-custom-error">
                 {errors.zip?.message}
               </p>
             </label>
             <label className="font-bolder">
               City
               <input
-                className="flex flex-col w-full p-4 border rounded-lg mt-1 font-normal"
+                className="mt-1 flex w-full flex-col rounded-lg border p-4 font-normal"
                 {...register("city", {
                   required: {
                     value: true,
@@ -165,14 +165,14 @@ const Checkout = () => {
                 })}
                 placeholder="Oslo"
               />
-              <p className="text-custom-error text-xs my-1">
+              <p className="my-1 text-xs text-custom-error">
                 {errors.zip?.message}
               </p>
             </label>
             <label className="font-bolder">
               County
               <input
-                className="flex flex-col w-full p-4 border rounded-lg mt-1 font-normal"
+                className="mt-1 flex w-full flex-col rounded-lg border p-4 font-normal"
                 {...register("country", {
                   required: {
                     value: true,
@@ -181,17 +181,17 @@ const Checkout = () => {
                 })}
                 placeholder="Norway"
               />
-              <p className="text-custom-error text-xs my-1">
+              <p className="my-1 text-xs text-custom-error">
                 {errors.country?.message}
               </p>
             </label>
-            <p className="mt-8 sm:col-span-2 text-13 text-custom-orange-d8">
+            <p className="text-13 mt-8 text-custom-orange-d8 sm:col-span-2">
               Payment Details
             </p>
             <div className="font-bolder">Payment Method</div>
 
             <label
-              className={` p-[1rem] border-[1px] rounded-lg sm:col-start-2  hover:border-orange-400 ${
+              className={` rounded-lg border-[1px] p-[1rem] hover:border-orange-400  sm:col-start-2 ${
                 paymentMethod === "cash"
                   ? "border-custom-orange-d8"
                   : "border-[#CFCFCF]"
@@ -199,7 +199,7 @@ const Checkout = () => {
               htmlFor="cash"
             >
               <input
-                className="flex flex-col w-full p-4 rounded-lg mt-1 font-normal"
+                className="mt-1 flex w-full flex-col rounded-lg p-4 font-normal"
                 {...register("payment")}
                 type="radio"
                 value="cash"
@@ -209,7 +209,7 @@ const Checkout = () => {
             </label>
 
             <label
-              className={`p-[1rem] border-[1px]   rounded-lg sm:col-start-2 hover:border-orange-400 ${
+              className={`rounded-lg border-[1px]   p-[1rem] hover:border-orange-400 sm:col-start-2 ${
                 paymentMethod === "emoney"
                   ? "border-custom-orange-d8"
                   : "border-[#CFCFCF]"
@@ -217,7 +217,7 @@ const Checkout = () => {
               htmlFor="emoney"
             >
               <input
-                className=" flex-col w-full p-4 border rounded-lg mt-1 font-normal"
+                className=" mt-1 w-full flex-col rounded-lg border p-4 font-normal"
                 {...register("payment")}
                 type="radio"
                 value="emoney"
@@ -234,7 +234,7 @@ const Checkout = () => {
             >
               e-Money Number
               <input
-                className=" lg:mb-12 flex flex-col w-full p-4 border rounded-lg mt-1 font-normal"
+                className=" mt-1 flex w-full flex-col rounded-lg border p-4 font-normal lg:mb-12"
                 {...register("emoney-number")}
                 type="number"
                 id="emoney-number"
@@ -247,14 +247,14 @@ const Checkout = () => {
                 ${
                   paymentMethod === "emoney"
                     ? " "
-                    : "hidden lg:block lg:invisible "
+                    : "hidden lg:invisible lg:block "
                 }
                   font-bolder
               `}
             >
               e-Money Pin
               <input
-                className="block lg:mb-12 w-full p-4 border rounded-lg mt-1 font-normal"
+                className="mt-1 block w-full rounded-lg border p-4 font-normal lg:mb-12"
                 {...register("emoney-pin")}
                 type="password"
                 id="emoney-pin"
@@ -263,22 +263,22 @@ const Checkout = () => {
             </label>
           </form>
 
-          <div className="flex-1 lg:max-w-lg p-12 bg-white lg:self-start rounded-xl ">
+          <div className="flex-1 rounded-xl bg-white p-12 lg:max-w-lg lg:self-start ">
             <p className="text-18">Summary</p>
             <div>
               {cart.map((product) => (
-                <div className="flex gap-4 my-4" key={product.slug}>
+                <div className="my-4 flex gap-4" key={product.slug}>
                   <img
                     className="h-16 w-16 rounded-lg"
                     src={`/assets/cart/image-${product.slug}.jpg`}
                     alt=""
                   />
                   <div className="">
-                    <p className="font-bolder text-lg">{product.short}</p>
+                    <p className="text-lg font-bolder">{product.short}</p>
                     <p className="font-bolder opacity-50">$ {product.price}</p>
                   </div>
                   <div className="ml-auto">
-                    <p className="font-bolder opacity-50 text-lg">
+                    <p className="text-lg font-bolder opacity-50">
                       x{product.quantity}
                     </p>
                   </div>
@@ -286,27 +286,27 @@ const Checkout = () => {
               ))}
             </div>
             <div className="flex justify-between">
-              <p className="font-bold opacity-50 uppercase">total</p>
-              <p className="font-bolder text-lg">$ {formattedTotal}</p>
+              <p className="font-bold uppercase opacity-50">total</p>
+              <p className="text-lg font-bolder">$ {formattedTotal}</p>
             </div>
             <div className="flex justify-between">
-              <p className="font-bold opacity-50 uppercase">shipping</p>
-              <p className="font-bolder text-lg">$ {shipping}</p>
+              <p className="font-bold uppercase opacity-50">shipping</p>
+              <p className="text-lg font-bolder">$ {shipping}</p>
             </div>
             <div className="flex justify-between">
-              <p className="font-bold opacity-50 uppercase">vat (included)</p>
-              <p className="font-bolder text-lg">$ {formattedVat}</p>
+              <p className="font-bold uppercase opacity-50">vat (included)</p>
+              <p className="text-lg font-bolder">$ {formattedVat}</p>
             </div>
             <div className="my-4 flex justify-between">
-              <p className="font-bold opacity-50 uppercase">Grand total</p>
-              <p className="font-bolder text-lg text-custom-orange-d8">
+              <p className="font-bold uppercase opacity-50">Grand total</p>
+              <p className="text-lg font-bolder text-custom-orange-d8">
                 $ {formattedGrandTotal}
               </p>
             </div>
-            <div className="w-full flex justify-center ">
+            <div className="flex w-full justify-center ">
               <button
                 onClick={handleSubmit(onSubmit)}
-                className="bg-custom-orange-d8 text-13 py-3 mt-2 w-full text-white uppercase"
+                className="text-13 mt-2 w-full bg-custom-orange-d8 py-3 uppercase text-white"
                 aria-label="Continue and proceed to payment"
               >
                 Continue & pay

@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => (
-  <footer className="bg-black pb-8 pt-12">
-    <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr] gap-10 sm:gap-4 md:gap-10 justify-items-center sm:justify-items-start px-2 max-w-[70em] mx-auto relative">
+  <footer className="bg-black px-2 pb-8  pt-12 sm:px-6">
+    <div className="relative mx-auto grid max-w-[70em] grid-cols-1 justify-items-center gap-10 px-2 sm:grid-cols-[1fr_1fr] sm:justify-items-start sm:gap-4 md:gap-10">
       <div className="absolute -top-12 h-[1px] w-24 border-t-4 border-custom-orange-d8"></div>
       <div className="sm:col-span-2 md:col-span-1">
         <img src="/assets/shared/desktop/logo.svg" alt="" />
       </div>
 
-      <ul className="flex flex-col items-center sm:flex-row md:justify-self-end   flex-grow gap-5 sm:gap-3 text-white text-[13px] tracking-[2px] font-bolder uppercase">
+      <ul className="flex flex-grow flex-col items-center gap-5   text-[13px] font-bolder uppercase tracking-[2px] text-white sm:flex-row sm:gap-3 md:justify-self-end">
         <li className="hover:text-custom-orange-d8">
           <Link to={"/"}>Home</Link>
         </li>
@@ -37,16 +37,16 @@ const Footer = () => (
           </Link>
         </li>
       </ul>
-      <p className="text-15 text-white text-center sm:text-start opacity-50 sm:col-span-2 md:col-span-1">
+      <p className="text-15 text-center text-white opacity-50 sm:col-span-2 sm:text-start md:col-span-1">
         Audiophile is an all in one stop to fulfill your audio needs. We’re a
         small team of music lovers and sound specialists who are devoted to
         helping you get the most out of personal audio. Come and visit our demo
         facility - we’re open 7 days a week.
       </p>
-      <p className="text-15 text-white opacity-50 mt-4 md:mt-0">
+      <p className="text-15 mt-4 text-white opacity-50 md:mt-0">
         Copyright 2021. All Rights Reserved
       </p>
-      <ul className="sm:self-center justify-self-center sm:justify-self-end flex items-end  mt-4 md:col-[2] md:row-[2_/_4] ">
+      <ul className="mt-4 flex items-end justify-self-center sm:self-center  sm:justify-self-end md:col-[2] md:row-[2_/_4] ">
         <li className="group p-2">
           <a href="#">
             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">

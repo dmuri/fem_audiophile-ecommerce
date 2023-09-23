@@ -7,7 +7,7 @@ const Product = () => {
   const [quantity, setQuantity] = useState(0);
   const product = getProductsBySlug(useParams().slug);
 
-  const addProductToCart = useStore((state) => state.addProductToCart); // Extract the action
+  const addProductToCart = useStore((state) => state.addProductToCart);
 
   function handleIncrement() {
     setQuantity((prev) => prev + 1);
@@ -17,9 +17,8 @@ const Product = () => {
   }
 
   const handleAddToCart = (product) => {
-    // console.log(product);
-    addProductToCart({ ...product, quantity }); // Note: We're passing the quantity here
-    setQuantity(0); // Reset the local state quantity after adding to cart
+    addProductToCart({ ...product, quantity });
+    setQuantity(0);
   };
   return (
     <>

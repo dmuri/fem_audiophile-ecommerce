@@ -22,11 +22,11 @@ const Navbar = () => {
 
   const navigate = useNavigate();
   return (
-    <header className="bg-black flex justify-center py-7">
-      <nav className=" flex-grow flex md:justify-between items-center max-w-[70em]">
+    <header className="flex justify-center bg-black px-2 py-7 sm:px-6">
+      <nav className=" flex max-w-[70em] flex-grow items-center md:justify-between">
         <button
           onClick={() => setMobileNavToggle(!mobileNavToggle)}
-          className="block md:hidden py-3 px-4 mr-4"
+          className="mr-4 block px-4 py-3 md:hidden"
           aria-label="navigation toggle"
         >
           <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
@@ -51,9 +51,9 @@ const Navbar = () => {
           </svg>
         </button>
         {mobileNavToggle && (
-          <div className="fixed top-[116px] bg-blue-300 h-72 w-[300px]"></div>
+          <div className="fixed top-[116px] h-72 w-[300px] bg-blue-300"></div>
         )}
-        <ul className="hidden md:flex  justify-center flex-grow gap-3 text-white text-[15px] tracking-[2px] font-bolder uppercase">
+        <ul className="hidden flex-grow  justify-center gap-3 text-[15px] font-bolder uppercase tracking-[2px] text-white md:flex">
           <li className="hover:text-custom-orange-d8">
             <Link to={"/"}>Home</Link>
           </li>

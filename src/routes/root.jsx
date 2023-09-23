@@ -8,8 +8,8 @@ const Root = () => {
   return (
     <>
       <Navbar />
-      <main>
-        <div className="mx-auto max-w-[70rem]">
+      <main className="px-2 sm:px-6">
+        <div className=" mx-auto max-w-[70rem] ">
           <Outlet />
           <BrandEngagement />
         </div>

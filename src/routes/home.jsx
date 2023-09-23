@@ -1,5 +1,6 @@
 import CategoryList from "../components/CategoryList.jsx";
 import { Link } from "react-router-dom";
+import FeaturedProductList from "../components/FeaturedProductList";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <br />
       <br />
       <CategoryList />
+      <FeaturedProductList />
     </div>
   );
 };

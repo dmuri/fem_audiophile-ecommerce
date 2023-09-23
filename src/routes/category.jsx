@@ -3,7 +3,6 @@ import { getProductsByCategory } from "../data/handleData.js";
 
 const Category = () => {
   const productByCategory = getProductsByCategory(useParams().category);
-  // console.log(productByCategory);
   return (
     <>
       <br />

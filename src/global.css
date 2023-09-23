@@ -10,9 +10,13 @@ html {
 #root {
   display: grid;
   grid-template-rows: auto 1fr auto;
-
   min-height: 100vh;
   position: relative;
+}
+
+@media (min-width: 375px) {
+  #root {
+  }
 }
 
 body {
