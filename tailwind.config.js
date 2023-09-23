@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "custom-svg": "url('/assets/home/desktop/pattern-circles.svg')",
+      },
       fontWeight: {
         bold: "500",
         bolder: "700",

@@ -1,10 +1,10 @@
 const BrandEngagement = () => {
   return (
-    <div className="flex flex-col gap-10 items-center justify-items-center md:items-start md:flex-row md:order-2  mb-24 ">
+    <div className="mb-24 flex flex-col items-center justify-items-center gap-10 md:order-2 md:flex-row  md:items-start ">
       <div className="flex-1">
         <picture>
           <source
-            media="(max-width: 480px)"
+            media="(max-width: 375px)"
             srcSet="/assets/shared/mobile/image-best-gear.jpg"
           />
           <source
@@ -12,18 +12,18 @@ const BrandEngagement = () => {
             srcSet="/assets/shared/tablet/image-best-gear.jpg"
           />
           <img
-            className="mx-auto rounded-lg overflow-hidden w-full md:max-w-[31rem] "
+            className="mx-auto w-full overflow-hidden rounded-lg md:max-w-[31rem] "
             src="/assets/shared/desktop/image-best-gear.jpg"
             alt="Responsive content"
           />
         </picture>
       </div>
-      <div className="flex-col gap-5 md:gap-8 flex-1 md:order-first  flex  md:self-center text-center md:text-left">
-        <h3 className="text-28 sm:text-[44px] sm:font-bolder sm:tracking-wider sm:leading-10 md:max-w-[17ch] uppercase">
+      <div className="flex flex-1 flex-col gap-5 text-center  md:order-first  md:gap-8 md:self-center md:text-left">
+        <h3 className="text-28 uppercase sm:text-[44px] sm:font-bolder sm:leading-10 sm:tracking-wider md:max-w-[17ch]">
           Bringing you the <span className="text-custom-orange-d8">best</span>{" "}
           audio gear
         </h3>
-        <p className="opacity-50 max-w-[65ch] md:max-w-[50ch]">
+        <p className="max-w-[65ch] opacity-50 md:max-w-[50ch]">
           Located at the heart of New York City, Audiophile is the premier store
           for high end headphones, earphones, speakers, and audio accessories.
           We have a large showroom and luxury demonstration rooms available for
