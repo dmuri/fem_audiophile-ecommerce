@@ -10,12 +10,12 @@ const FeaturedProductList = () => {
         <div className="z-0 flex justify-center md:basis-3/5">
           <div className="relative ">
             <img
-              className="z-20 mx-auto -mb-2 h-auto w-[200px] px-4 pt-24 md:w-[400px]"
+              className="z-20 mx-auto -mb-2 h-auto w-[200px] px-4 pt-24 transition group-hover:scale-[105%] md:w-[400px]"
               src="/assets/home/desktop/image-speaker-zx9.png"
               alt="Responsive content"
             />
             <svg
-              className="absolute -right-[360px] -top-[240px] -z-50 md:-right-[280px] md:-top-16 "
+              className="absolute -right-[360px] -top-[240px] -z-50 transition duration-100 group-hover:scale-125 md:-right-[280px] md:-top-16 "
               width="944"
               height="944"
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ const FeaturedProductList = () => {
             srcSet="/assets/home/tablet/image-speaker-zx7.jpg"
           />
           <img
-            className="rounded-r-lg"
+            className="rounded-r-lg transition group-hover:-translate-x-2 group-hover:scale-[105%]"
             src="/assets/home/desktop/image-speaker-zx7.jpg"
             alt="Responsive content"
           />
@@ -69,8 +69,8 @@ const FeaturedProductList = () => {
         </div>
       </div>
 
-      <div className=" group flex cursor-pointer flex-col gap-4 sm:flex-row">
-        <picture className="flex-1">
+      <div className=" group flex cursor-pointer flex-col gap-4 overflow-hidden sm:flex-row">
+        <picture className="flex-1 rounded-lg">
           <source
             media="(max-width: 480px)"
             srcSet="/assets/home/mobile/image-earphones-yx1.jpg"
@@ -80,7 +80,7 @@ const FeaturedProductList = () => {
             srcSet="/assets/home/tablet/image-earphones-yx1.jpg"
           />
           <img
-            className="rounded-lg"
+            className="rounded-lg transition duration-100 group-hover:-translate-x-2 group-hover:scale-105 group-hover:rounded-lg"
             src="/assets/home/desktop/image-earphones-yx1.jpg"
             alt="Responsive content"
           />

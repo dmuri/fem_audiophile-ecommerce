@@ -1,13 +1,12 @@
 import useStore from "../store/index.js";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import CategoryList from "./CategoryList";
 
 const Cart = () => {
   const navigate = useNavigate();
   const cart = useStore((state) => state.cart);
   const removeProductFromCart = useStore(
-    (state) => state.removeProductFromCart
+    (state) => state.removeProductFromCart,
   );
   const clearCart = useStore((state) => state.clearCart);
   const incrementQuantity = useStore((state) => state.incrementProductQuantity);
@@ -19,10 +18,10 @@ const Cart = () => {
   return (
     <div className="relative ml-auto">
       {cart.length > 0 && (
-        <div className="absolute top-[4px] right-[3px] w-4 h-4 rounded-full bg-custom-orange-d8"></div>
+        <div className="absolute right-[3px] top-[4px] h-4 w-4 rounded-full bg-custom-orange-d8"></div>
       )}
       <button
-        className="group hover:fill-custom-orange-d8 mx-auto p-3 "
+        className="group mx-auto p-3 hover:fill-custom-orange-d8 "
         aria-label="cart-toggle"
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -39,11 +38,11 @@ const Cart = () => {
       {isOpen && (
         <>
           <div
-            className="fixed z-10 inset-0 flex flex-col items-center justify-center bg-[rgba(0,0,0,0.4)]"
+            className="fixed inset-0 z-10 flex flex-col items-center justify-center bg-[rgba(0,0,0,0.4)]"
             onClick={() => setIsOpen(false)}
           ></div>
           <div
-            className="absolute  w-[17rem] sm:w-[23.5rem]   top-20 right-2 z-20 bg-white p-6 rounded-lg"
+            className="absolute  right-2 top-20   z-20 w-[17rem] rounded-lg bg-white p-6 sm:w-[23.5rem]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between">
@@ -59,31 +58,31 @@ const Cart = () => {
               </button>
             </div>
             {cart.map((product) => (
-              <div className=" flex gap-4 my-4 items-center" key={product.slug}>
+              <div className=" my-4 flex items-center gap-4" key={product.slug}>
                 <img
-                  className="h-8 w-8 sm:h-16 sm:w-16 rounded-lg"
+                  className="h-8 w-8 rounded-lg sm:h-16 sm:w-16"
                   src={`/assets/cart/image-${product.slug}.jpg`}
                   alt=""
                 />
                 <div className="">
-                  <p className="font-bolder text-md">{product.short}</p>
-                  <p className="font-bolder text-sm opacity-50">
+                  <p className="text-md font-bolder">{product.short}</p>
+                  <p className="text-sm font-bolder opacity-50">
                     $ {product.price}
                   </p>
                 </div>
                 <div className="ml-auto flex items-center rounded-md bg-gray-200">
                   <button
                     onClick={() => decrementQuantity(product.slug)}
-                    className="px-5 py-2 hover:text-custom-orange-d8 hover:scale-125"
+                    className="px-5 py-2 hover:scale-125 hover:text-custom-orange-d8"
                   >
                     -
                   </button>
-                  <p className="font-bolder text-sm min-w-[14px] ">
+                  <p className="min-w-[14px] text-sm font-bolder ">
                     {product.quantity}
                   </p>
                   <button
                     onClick={() => incrementQuantity(product.slug)}
-                    className="px-5 py-2 hover:text-custom-orange-d8 hover:scale-125"
+                    className="px-5 py-2 hover:scale-125 hover:text-custom-orange-d8"
                   >
                     +
                   </button>
@@ -93,19 +92,19 @@ const Cart = () => {
             <hr className="mt-5" />
             {cart.length === 0 ? (
               <div className="flex justify-center">
-                <p className="text-15 uppercase font-bolder opacity-50 my-8">
+                <p className="text-15 my-8 font-bolder uppercase opacity-50">
                   Cart is empty
                 </p>
               </div>
             ) : (
               <>
-                <div className="flex justify-between items-center mb-4 mt-8">
-                  <p className="font-bold opacity-50 uppercase">Total</p>
-                  <p className="font-bolder text-lg">$ {total}</p>
+                <div className="mb-4 mt-8 flex items-center justify-between">
+                  <p className="font-bold uppercase opacity-50">Total</p>
+                  <p className="text-lg font-bolder">$ {total}</p>
                 </div>
 
                 <button
-                  className="bg-custom-orange-d8 text-13 py-3 mt-2 w-full text-white uppercase"
+                  className="text-13 mt-2 w-full bg-custom-orange-d8 py-3 uppercase text-white"
                   aria-label="Navigate home"
                   onClick={() => {
                     setIsOpen(false);

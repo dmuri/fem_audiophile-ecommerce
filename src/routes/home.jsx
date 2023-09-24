@@ -1,4 +1,4 @@
-import CategoryList from "../components/CategoryList.jsx";
+import CategoryThumbnails from "../components/CategoryThumbnails.jsx";
 import { Link } from "react-router-dom";
 import FeaturedProductList from "../components/FeaturedProductList";
 
@@ -12,7 +12,7 @@ const Home = () => {
       </Link>
       <br />
       <br />
-      <CategoryList />
+      <CategoryThumbnails />
       <FeaturedProductList />
     </div>
   );
