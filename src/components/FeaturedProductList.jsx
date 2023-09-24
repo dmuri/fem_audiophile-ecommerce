@@ -40,7 +40,10 @@ const FeaturedProductList = () => {
         </div>
       </div>
 
-      <div className="group relative mb-6 cursor-pointer overflow-hidden rounded-lg">
+      <div
+        onClick={() => navigate("product/zx7-speaker")}
+        className="group relative mb-6 cursor-pointer overflow-hidden rounded-lg"
+      >
         <picture>
           <source
             media="(max-width: 420px)"
@@ -69,7 +72,10 @@ const FeaturedProductList = () => {
         </div>
       </div>
 
-      <div className=" group flex cursor-pointer flex-col gap-4 overflow-hidden sm:flex-row">
+      <div
+        onClick={() => navigate("product/yx1-earphones")}
+        className=" group flex cursor-pointer flex-col gap-4 overflow-hidden sm:flex-row"
+      >
         <picture className="flex-1 rounded-lg">
           <source
             media="(max-width: 480px)"
