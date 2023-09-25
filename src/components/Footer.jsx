@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => (
-  <footer className="bg-black px-2 pb-8  pt-12 sm:px-6">
+  <footer className="bg-[#191919] px-2 pb-8  pt-12 sm:px-6">
     <div className="relative mx-auto grid max-w-[70em] grid-cols-1 justify-items-center gap-10 px-2 sm:grid-cols-[1fr_1fr] sm:justify-items-start sm:gap-4 md:gap-10">
       <div className="absolute -top-12 h-[1px] w-24 border-t-4 border-custom-orange-d8"></div>
       <div className="sm:col-span-2 md:col-span-1">

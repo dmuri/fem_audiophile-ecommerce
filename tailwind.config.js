@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "custom-svg": "url('/assets/home/desktop/pattern-circles.svg')",
+        "hero-desktop": "url('/assets/home/desktop/image-hero.jpg')",
+        "hero-tablet": "url('/assets/home/tablet/image-header.jpg')",
+        "hero-mobile": "url('/assets/home/mobile/image-header.jpg')",
       },
       fontWeight: {
         bold: "500",
@@ -20,7 +22,8 @@ export default {
         "gray-200": "#F1F1F1",
       },
       screens: {
-        sm: "480px",
+        xs: "340px",
+        sm: "565px",
         md: "768px",
         lg: "1024px",
         xl: "1440px",

@@ -5,6 +5,7 @@
 /* Prevent jumping when scroll-bar appears or disappears between routing */
 html {
   overflow-y: scroll;
+  box-sizing: border-box;
 }
 /* Page layout */
 #root {
@@ -21,6 +22,7 @@ html {
 
 body {
   font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
 }
 
 /*Utility classes*/

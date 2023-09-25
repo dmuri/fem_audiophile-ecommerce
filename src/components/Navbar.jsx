@@ -2,9 +2,10 @@ import Cart from "./Cart.jsx";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import CategoryThumbnailsMenu from "./CategoryThumbnailsMenu";
 
 const Navbar = () => {
-  const [mobileNavToggle, setMobileNavToggle] = useState(false);
+  const [mobileNavToggle, setMobileNavToggle] = useState(true);
 
   // Clears mobile menu if screen goes big again
   useEffect(() => {
@@ -22,8 +23,8 @@ const Navbar = () => {
 
   const navigate = useNavigate();
   return (
-    <header className="flex justify-center bg-black px-2 py-7 sm:px-6">
-      <nav className=" flex max-w-[70em] flex-grow items-center md:justify-between">
+    <header className="flex justify-center bg-[#1A1A1A] px-2 py-7 sm:px-6">
+      <nav className="relative z-30 flex max-w-[70em] flex-grow items-center md:justify-between">
         <button
           onClick={() => setMobileNavToggle(!mobileNavToggle)}
           className="mr-4 block px-4 py-3 md:hidden"
@@ -50,9 +51,7 @@ const Navbar = () => {
             />
           </svg>
         </button>
-        {mobileNavToggle && (
-          <div className="fixed top-[116px] h-72 w-[300px] bg-blue-300"></div>
-        )}
+        {mobileNavToggle && <CategoryThumbnailsMenu />}
         <ul className="hidden flex-grow  justify-center gap-3 text-[15px] font-bolder uppercase tracking-[2px] text-white md:flex">
           <li className="hover:text-custom-orange-d8">
             <Link to={"/"}>Home</Link>
