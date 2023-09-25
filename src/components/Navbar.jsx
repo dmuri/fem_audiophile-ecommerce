@@ -51,7 +51,9 @@ const Navbar = () => {
             />
           </svg>
         </button>
-        {mobileNavToggle && <CategoryThumbnailsMenu />}
+        {mobileNavToggle && (
+          <CategoryThumbnailsMenu setMobileNavToggle={setMobileNavToggle} />
+        )}
         <ul className="hidden flex-grow  justify-center gap-3 text-[15px] font-bolder uppercase tracking-[2px] text-white md:flex">
           <li className="hover:text-custom-orange-d8">
             <Link to={"/"}>Home</Link>
