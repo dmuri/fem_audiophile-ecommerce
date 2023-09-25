@@ -11,7 +11,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768 && mobileNavToggle) {
-        setMobileNavToggle(false);
+        //   setMobileNavToggle(false);
       }
     };
     window.addEventListener("resize", handleResize);
