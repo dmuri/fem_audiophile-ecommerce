@@ -1,5 +1,65 @@
-const DecorativeGallery = () => {
-  return <div>DecorativeGallery</div>;
+const ProductDecorativeGallery = ({ slug }) => {
+  const startUrl = `/assets/product-${slug}/`;
+  const url1 = "/assets/product-xx59-headphones/desktop/image-gallery-1.jpg";
+  console.log(url1);
+  const url2 = "/assets/product-xx59-headphones/desktop/image-gallery-2.jpg";
+  console.log(url2);
+  const url3 = "/assets/product-xx59-headphones/desktop/image-gallery-3.jpg";
+  console.log(url3);
+  return (
+    <>
+      <div className="my-10 flex flex-col gap-2 overflow-hidden sm:flex-row sm:gap-4 md:gap-8">
+        <div className="flex flex-col gap-2 sm:gap-4 md:gap-8">
+          <div className="">
+            <picture className="">
+              <source
+                media="(max-width: 768px)"
+                srcSet={`${startUrl}mobile/image-gallery-1.jpg`}
+              />
+              <source
+                media="(max-width: 1024px)"
+                srcSet={`${startUrl}tablet/image-gallery-1.jpg`}
+              />
+              <img
+                className=""
+                src={`${startUrl}desktop/image-gallery-1.jpg`}
+              />
+            </picture>
+          </div>
+          <div className="">
+            <picture className="">
+              <source
+                media="(max-width: 768px)"
+                srcSet={`${startUrl}mobile/image-gallery-2.jpg`}
+              />
+              <source
+                media="(max-width: 1024px)"
+                srcSet={`${startUrl}tablet/image-gallery-2.jpg`}
+              />
+              <img
+                className=""
+                src={`${startUrl}desktop/image-gallery-2.jpg`}
+              />
+            </picture>
+          </div>
+        </div>
+
+        <div className="overflow-hidden">
+          <picture className="-translate-y-6">
+            <source
+              media="(max-width: 768px)"
+              srcSet={`${startUrl}mobile/image-gallery-3.jpg`}
+            />
+            <source
+              media="(max-width: 1024px)"
+              srcSet={`${startUrl}tablet/image-gallery-3.jpg`}
+            />
+            <img className="" src={`${startUrl}desktop/image-gallery-3.jpg`} />
+          </picture>
+        </div>
+      </div>
+    </>
+  );
 };
 
-export default DecorativeGallery;
+export default ProductDecorativeGallery;
