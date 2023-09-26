@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 import CategoryThumbnailsMenu from "./CategoryThumbnailsMenu";
 
 const Navbar = () => {
-  const [mobileNavToggle, setMobileNavToggle] = useState(true);
+  const [mobileNavToggle, setMobileNavToggle] = useState(false);
 
   // Clears mobile menu if screen goes big again
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768 && mobileNavToggle) {
-        //   setMobileNavToggle(false);
+        setMobileNavToggle(false);
       }
     };
     window.addEventListener("resize", handleResize);

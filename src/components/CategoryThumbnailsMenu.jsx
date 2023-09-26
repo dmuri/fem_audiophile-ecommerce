@@ -7,12 +7,12 @@ const CategoryThumbnailsMenu = ({ setMobileNavToggle }) => {
     <>
       <div className="relative -z-10">
         <div
-          className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-[rgba(0,0,0,0.4)]"
+          className="fixed inset-0 z-40  items-center justify-center bg-[rgba(0,0,0,0.4)] sm:flex-row"
           onClick={() => setMobileNavToggle(false)}
         ></div>
       </div>
       <div className="absolute inset-x-0 top-20 z-10  w-full rounded-lg bg-white px-12">
-        <ul className=" my-28 flex flex-col gap-24 md:flex-row md:gap-12">
+        <ul className=" my-28 flex flex-col gap-24 md:gap-12">
           {categories.map((category) => (
             <li key={category} className=" group basis-1/3">
               <button
@@ -55,52 +55,6 @@ const CategoryThumbnailsMenu = ({ setMobileNavToggle }) => {
             </li>
           ))}
         </ul>
-
-        {/* <ul className="flex h-full flex-col  items-center gap-4 bg-white sm:flex-row ">
-        {categories.map((category) => (
-          <li
-            key={category}
-            className=" h-[165px] basis-1/3  rounded-lg bg-red-100"
-          >
-            <button
-              className="w-full"
-              aria-label="Goto category"
-              onClick={() => {
-                navigate(`category/${category}`);
-              }}
-            >
-              <div className="relative flex flex-col items-center justify-end ">
-                <img
-                  className="absolute w-full -translate-y-1/3"
-                  src={`/assets/shared/desktop/image-category-thumbnail-${category}.png`}
-                  alt=""
-                />
-                <p className="font-bolder uppercase tracking-[1.07px]">
-                  {category}
-                </p>
-                <div className="flex items-center gap-2 ">
-                  <p className="text-sm uppercase opacity-50 ">shop</p>
-                  <svg
-                    className=""
-                    width="8"
-                    height="12"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.322 1l5 5-5 5"
-                      stroke="#D87D4A"
-                      strokeWidth="2"
-                      fill="none"
-                      fillRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </button>
-            <br />
-          </li>
-        ))}
-      </ul> */}
       </div>
     </>
   );
