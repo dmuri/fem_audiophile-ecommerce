@@ -1,4 +1,3 @@
-// store.js
 import { create } from "zustand";
 
 const initialState = () => {
@@ -9,7 +8,7 @@ const SHIPPING_COST = 50;
 const calculateTotal = (cart) =>
   cart.reduce(
     (accumulator, item) => accumulator + item.price * item.quantity,
-    0
+    0,
   );
 
 const calculateVAT = (total) => total * 0.2;
@@ -19,13 +18,13 @@ const useStore = create((set) => ({
   cart: initialState(),
 
   setCart: (cart) => {
-    localStorage.setItem("cart", JSON.stringify(cart)); // Save to localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
     set({ cart });
   },
   addProductToCart: (product) =>
     set((state) => {
       const existingProductIndex = state.cart.findIndex(
-        (p) => p.slug === product.slug
+        (p) => p.slug === product.slug,
       );
       let updatedCart;
 
@@ -44,27 +43,27 @@ const useStore = create((set) => ({
         updatedCart[existingProductIndex].quantity += product.quantity;
       }
 
-      localStorage.setItem("cart", JSON.stringify(updatedCart)); // Save updatedCart to localStorage
-      return { cart: updatedCart }; // Return the updated cart state
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      return { cart: updatedCart };
     }),
 
   removeProductFromCart: (productSlug) =>
     set((state) => {
       const newCart = state.cart.filter(
-        (product) => product.slug !== productSlug
+        (product) => product.slug !== productSlug,
       );
       localStorage.setItem("cart", JSON.stringify(newCart));
       return { cart: newCart };
     }),
   clearCart: () => {
-    localStorage.removeItem("cart"); // Clear from localStorage
+    localStorage.removeItem("cart");
     set({ cart: [] });
   },
 
   incrementProductQuantity: (productSlug) =>
     set((state) => {
       const existingProductIndex = state.cart.findIndex(
-        (p) => p.slug === productSlug
+        (p) => p.slug === productSlug,
       );
 
       if (existingProductIndex !== -1) {
@@ -80,7 +79,7 @@ const useStore = create((set) => ({
   decrementProductQuantity: (productSlug) =>
     set((state) => {
       const existingProductIndex = state.cart.findIndex(
-        (p) => p.slug === productSlug
+        (p) => p.slug === productSlug,
       );
 
       if (
@@ -108,7 +107,7 @@ const useStore = create((set) => ({
     Math.floor(calculateVAT(calculateTotal(state.cart))).toLocaleString(),
   getFormattedGrandTotal: (state) =>
     Math.round(
-      calculateGrandTotal(calculateTotal(state.cart))
+      calculateGrandTotal(calculateTotal(state.cart)),
     ).toLocaleString(),
 }));
 
