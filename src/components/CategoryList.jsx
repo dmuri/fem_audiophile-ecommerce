@@ -9,8 +9,9 @@ const CategoryList = () => {
   return (
     <>
       <div className="relative ">
+        <div className="absolute top-0 z-50 h-[1px] w-full bg-red-300 bg-opacity-10"></div>
         <div>
-          <h2 className="absolute -inset-x-[100vw] top-0 bg-[#1A1A1A] pb-8 pt-4 text-center text-3xl font-bolder uppercase text-white md:pb-16 md:pt-12 md:text-5xl">
+          <h2 className="absolute -inset-x-[100vw]  bg-[#1A1A1A] pb-10 pt-8 text-center text-3xl font-bolder uppercase text-white md:pb-16 md:pt-12 md:text-5xl">
             {productByCategory[0].category}
           </h2>
         </div>
