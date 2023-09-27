@@ -1,5 +1,3 @@
-import { useParams } from "react-router-dom";
-import { getProductsBySlug } from "../data/handleData.js";
 import { useState } from "react";
 import useStore from "../store/index.js";
 const ProductDetails = ({ product }) => {

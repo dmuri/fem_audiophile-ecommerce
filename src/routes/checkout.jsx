@@ -1,10 +1,10 @@
-import Navbar from "../components/Navbar.jsx";
-import Footer from "../components/Footer.jsx";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import Footer from "../components/Footer.jsx";
 import GoBackButton from "../components/GoBackButton.jsx";
-import React, { useEffect, useRef, useState } from "react";
-import useStore from "../store/index.js";
+import Navbar from "../components/Navbar.jsx";
 import ThankYou from "../components/ThankYou.jsx";
+import useStore from "../store/index.js";
 
 const Checkout = () => {
   const {

@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getProductsByCategory } from "../data/handleData.js";
 
 const CategoryList = () => {

@@ -1,5 +1,5 @@
-import { getAllCategories } from "../data/handleData.js";
 import { useNavigate } from "react-router-dom";
+import { getAllCategories } from "../data/handleData.js";
 const CategoryThumbnailsMenu = ({ setMobileNavToggle }) => {
   const categories = getAllCategories();
   const navigate = useNavigate();

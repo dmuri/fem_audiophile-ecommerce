@@ -1,11 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Root from "./routes/root.jsx";
-import Home from "./routes/home.jsx";
+import { useEffect } from "react";
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Category from "./routes/category.jsx";
 import Checkout from "./routes/checkout.jsx";
+import Home from "./routes/home.jsx";
 import Product from "./routes/product.jsx";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import Root from "./routes/root.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
