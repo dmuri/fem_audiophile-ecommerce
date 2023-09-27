@@ -74,6 +74,7 @@ const Cart = () => {
                   <button
                     onClick={() => decrementQuantity(product.slug)}
                     className="px-5 py-2 hover:scale-125 hover:text-custom-orange-d8"
+                    aria-label="decrease quantity"
                   >
                     -
                   </button>
@@ -83,6 +84,7 @@ const Cart = () => {
                   <button
                     onClick={() => incrementQuantity(product.slug)}
                     className="px-5 py-2 hover:scale-125 hover:text-custom-orange-d8"
+                    aria-label="increase quantity"
                   >
                     +
                   </button>

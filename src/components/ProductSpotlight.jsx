@@ -3,18 +3,19 @@ const ProductSpotlight = () => {
   const navigate = useNavigate();
   return (
     <>
+      <h1 className="sr-only">Audiophile E-commerce Shop</h1>
       <hr className="opacity-10" />
       <div
         onClick={() => {
           navigate("/product/xx99-mark-two-headphones");
         }}
-        className="group relative flex cursor-pointer flex-col items-center justify-start bg-[#1A1A1A]  md:h-[567px]  md:flex-row"
+        className="group relative flex cursor-pointer flex-col items-center justify-start bg-[#1A1A1A] md:h-[567px]  md:flex-row  lg:mb-44"
       >
         <div className="absolute bottom-32 z-10 flex flex-col items-center gap-5 self-center text-center sm:top-64    md:static md:items-start md:text-left">
           <p className="text-14 text-white opacity-50">New product</p>
-          <p className="d max-w-none text-4xl font-bolder uppercase text-white sm:text-6xl md:max-w-[20ch] md:text-4xl lg:text-6xl  ">
+          <h2 className=" max-w-none text-4xl font-bolder uppercase text-white sm:text-6xl md:max-w-[20ch] md:text-4xl lg:text-6xl  ">
             XX99 Mark II Headphones
-          </p>
+          </h2>
           <p className="text-15 max-w-[40ch] text-white opacity-75">
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.

@@ -20,7 +20,7 @@ const CategoryThumbnails = () => {
                 src={`/assets/shared/desktop/image-category-thumbnail-${category}.png`}
                 alt=""
               />
-              <p className="text-18 mb-2 uppercase">{category}</p>
+              <h2 className="text-18 mb-2 uppercase">{category}</h2>
               <div className="mb-8 flex items-center gap-3">
                 <p className="text-sm uppercase opacity-50 transition duration-100 group-hover:text-custom-orange-d8">
                   shop

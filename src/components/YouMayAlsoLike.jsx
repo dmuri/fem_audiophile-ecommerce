@@ -5,9 +5,9 @@ const YouMayAlsoLike = ({ others }) => {
   console.log(url);
   return (
     <div className=" mb-56 flex flex-col items-center md:mb-44 lg:mb-56">
-      <p className=" text-2xl font-bolder uppercase md:text-3xl">
+      <h2 className=" text-2xl font-bolder uppercase md:text-3xl">
         You may also like
-      </p>
+      </h2>
       <ul className="items center flex flex-col md:flex-row md:gap-3">
         {others.map((other) => (
           <li
@@ -29,12 +29,13 @@ const YouMayAlsoLike = ({ others }) => {
                 srcSet={`${other.image.desktop}`}
               />
             </picture>
-            <p className="text-2xl font-bolder uppercase tracking-[1.7px]">
+            <h3 className="text-2xl font-bolder uppercase tracking-[1.7px]">
               {other.name}
-            </p>
+            </h3>
             <button
               onClick={() => navigate(`/product/${other.slug}`)}
               className="rounded-sm bg-custom-orange-d8 px-6 py-3 text-xs font-bolder uppercase text-white group-hover:bg-custom-orange-fb xs:text-lg"
+              aria-label="see product"
             >
               See product
             </button>

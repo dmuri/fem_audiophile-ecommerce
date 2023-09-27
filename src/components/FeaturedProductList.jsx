@@ -29,12 +29,15 @@ const FeaturedProductList = () => {
           </div>
         </div>
         <div className="mb-16 mt-16 flex flex-col items-center gap-4 self-center text-center text-white md:basis-2/5 md:items-start md:text-left">
-          <p className="text-56 max-w-[7ch] ">ZX9 Speaker</p>
+          <h2 className="text-56 max-w-[7ch] ">ZX9 Speaker</h2>
           <p className="max-w-[35ch] opacity-75">
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <button className=" z-20 w-[180px] whitespace-nowrap border border-black  bg-black py-3 font-bolder uppercase group-hover:bg-white group-hover:text-black">
+          <button
+            aria-label="see product"
+            className=" z-20 w-[180px] whitespace-nowrap border border-black  bg-black py-3 font-bolder uppercase group-hover:bg-white group-hover:text-black"
+          >
             See Product
           </button>
         </div>
@@ -60,9 +63,10 @@ const FeaturedProductList = () => {
           />
         </picture>
         <div className="absolute left-[5%] top-[35%] ">
-          <p className="text-28  mb-5">ZX7 Speaker</p>
+          <h2 className="text-28  mb-5">ZX7 Sheaker</h2>
           <button
             className=" w-[120px] whitespace-nowrap border border-black py-3   font-bolder uppercase group-hover:bg-black group-hover:text-white sm:w-[180px]"
+            aria-label="see product"
             onClick={() => {
               navigate("/product/zx7-speaker");
             }}
@@ -92,9 +96,10 @@ const FeaturedProductList = () => {
           />
         </picture>
         <div className=" flex flex-1 flex-col justify-center gap-8 rounded-lg bg-gray-200 px-4 py-6 md:pl-[10%]">
-          <p className="text-28">YX1 Earphones</p>
+          <h2 className="text-28">YX1 Earphones</h2>
           <button
             className=" w-[120px] whitespace-nowrap border border-black py-3   font-bolder uppercase group-hover:bg-black group-hover:text-white sm:w-[180px]"
+            aria-label="see product"
             onClick={() => {
               navigate("/product/yx1-earphones");
             }}

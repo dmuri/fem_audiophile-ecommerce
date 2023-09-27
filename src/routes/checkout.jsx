@@ -51,10 +51,10 @@ const Checkout = () => {
             onSubmit={handleSubmit(onSubmit)}
             noValidate
           >
-            <p className="text-32 sm:col-span-2 ">Checkout</p>
-            <p className="text-13 mt-8 text-custom-orange-d8 sm:col-span-2">
+            <h2 className="text-32 sm:col-span-2 ">Checkout</h2>
+            <h3 className="text-13 mt-8 text-custom-orange-d8 sm:col-span-2">
               Billing details
-            </p>
+            </h3>
             <label className=" font-bolder">
               Name
               <input
@@ -117,9 +117,9 @@ const Checkout = () => {
                 {errors.phone?.message}
               </p>
             </label>
-            <p className="text-13 mt-8 text-custom-orange-d8 sm:col-span-2">
+            <h3 className="text-13 mt-8 text-custom-orange-d8 sm:col-span-2">
               Shipping info
-            </p>
+            </h3>
             <label className="font-bolder sm:col-span-2">
               Address
               <input
@@ -185,9 +185,9 @@ const Checkout = () => {
                 {errors.country?.message}
               </p>
             </label>
-            <p className="text-13 mt-8 text-custom-orange-d8 sm:col-span-2">
+            <h3 className="text-13 mt-8 text-custom-orange-d8 sm:col-span-2">
               Payment Details
-            </p>
+            </h3>
             <div className="font-bolder">Payment Method</div>
 
             <label
@@ -264,7 +264,7 @@ const Checkout = () => {
           </form>
 
           <div className="flex-1 rounded-xl bg-white p-12 lg:max-w-lg lg:self-start ">
-            <p className="text-18">Summary</p>
+            <h2 className="text-18">Summary</h2>
             <div>
               {cart.map((product) => (
                 <div className="my-4 flex gap-4" key={product.slug}>

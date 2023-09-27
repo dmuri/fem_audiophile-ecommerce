@@ -10,9 +10,9 @@ const CategoryList = () => {
     <>
       <div className="relative ">
         <div>
-          <p className="absolute -inset-x-[100vw] top-0 bg-[#1A1A1A] pb-8 pt-4 text-center text-3xl font-bolder uppercase text-white md:pb-16 md:pt-12 md:text-5xl">
+          <h2 className="absolute -inset-x-[100vw] top-0 bg-[#1A1A1A] pb-8 pt-4 text-center text-3xl font-bolder uppercase text-white md:pb-16 md:pt-12 md:text-5xl">
             {productByCategory[0].category}
-          </p>
+          </h2>
         </div>
         <ul className="lg:gap-18 mb-56 flex flex-col items-center gap-32 pt-36 md:pt-60">
           {productByCategory.map((product, index) => (
@@ -47,7 +47,7 @@ const CategoryList = () => {
                 {product.new && (
                   <p className="text-14 text-custom-orange-d8">New product</p>
                 )}
-                <p className="text-28 md:text-4xl">{product.name}</p>
+                <h3 className="text-28 md:text-4xl">{product.name}</h3>
                 <p className="max-w-lg leading-[25px] opacity-50 lg:max-w-md">
                   {product.description}
                 </p>

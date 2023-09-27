@@ -19,10 +19,10 @@ const BrandEngagement = () => {
         </picture>
       </div>
       <div className="flex flex-1 flex-col gap-5 text-center  md:order-first  md:gap-8 md:self-center md:text-left">
-        <h3 className="text-28 uppercase sm:text-[44px] sm:font-bolder sm:leading-10 sm:tracking-wider md:max-w-[17ch]">
+        <h2 className="text-28 uppercase sm:text-[44px] sm:font-bolder sm:leading-10 sm:tracking-wider md:max-w-[17ch]">
           Bringing you the <span className="text-custom-orange-d8">best</span>{" "}
           audio gear
-        </h3>
+        </h2>
         <p className="max-w-[65ch] opacity-50 md:max-w-[50ch]">
           Located at the heart of New York City, Audiophile is the premier store
           for high end headphones, earphones, speakers, and audio accessories.

@@ -21,9 +21,9 @@ const ThankYou = ({ setShowThankYou, cart, formattedGrandTotal }) => {
           src="/assets/checkout/icon-order-confirmation.svg"
           alt=""
         />
-        <p className="text-32">
+        <h2 className="text-32">
           Thank you <br /> for your order
-        </p>
+        </h2>
         <p className="text-md opacity-50">
           You will receive an email confirmation shortly
         </p>
