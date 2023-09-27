@@ -8,7 +8,7 @@ const ProductDecorativeGallery = ({ slug }) => {
   console.log(url3);
   return (
     <>
-      <div className="my-10 flex flex-col gap-2 overflow-hidden sm:flex-row sm:gap-4 md:gap-8">
+      <div className="my-32 flex flex-col gap-2 overflow-hidden sm:flex-row sm:gap-4 md:gap-8">
         <div className="flex flex-col gap-2 sm:gap-4 md:gap-8">
           <div className="">
             <picture className="">

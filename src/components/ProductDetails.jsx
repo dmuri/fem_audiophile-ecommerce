@@ -47,7 +47,9 @@ const ProductDetails = ({ product }) => {
         <p className="font-bold leading-[25px] opacity-50">
           {product.description}
         </p>
-        <p className="font-bolder tracking-[1.29px]">$ {product.price}</p>
+        <p className="text-lg font-bolder tracking-[1.29px]">
+          $ {product.price}
+        </p>
 
         <div className=" flex items-center gap-4">
           <div className="flex basis-1/5 items-center justify-between gap-4 bg-gray-200">
