@@ -306,7 +306,7 @@ const Checkout = () => {
             <div className="flex w-full justify-center ">
               <button
                 onClick={handleSubmit(onSubmit)}
-                className="text-13 mt-2 w-full bg-custom-orange-d8 py-3 uppercase text-white"
+                className="text-13 mt-2 w-full bg-custom-orange-d8 py-3 uppercase text-white hover:bg-custom-orange-fb"
                 aria-label="Continue and proceed to payment"
               >
                 Continue & pay

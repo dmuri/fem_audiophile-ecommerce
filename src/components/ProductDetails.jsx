@@ -51,18 +51,18 @@ const ProductDetails = ({ product }) => {
           $ {product.price}
         </p>
 
-        <div className=" flex items-center gap-4">
+        <div className=" flex items-center gap-1 xs:gap-4">
           <div className="flex basis-1/5 items-center justify-between gap-4 bg-gray-200">
             <button
               onClick={handleDecrement}
-              className="px-5 py-3 hover:scale-125 hover:text-custom-orange-d8"
+              className="px-3 py-3 hover:scale-125 hover:text-custom-orange-d8 xs:px-5 xs:py-3"
             >
               -
             </button>
             <p className="min-w-[14px] text-sm font-bolder ">{quantity}</p>
             <button
               onClick={handleIncrement}
-              className="px-5 py-3 hover:scale-125 hover:text-custom-orange-d8"
+              className="px-3 py-3 hover:scale-125 hover:text-custom-orange-d8 xs:px-5 xs:py-3"
             >
               +
             </button>
@@ -71,7 +71,7 @@ const ProductDetails = ({ product }) => {
           <div className="max-w-md  basis-2/3">
             <button
               onClick={() => handleAddToCart(product)}
-              className=" text-md w-full  bg-custom-orange-d8 py-3 font-bolder  uppercase text-white xs:text-lg"
+              className=" text-md w-full   bg-custom-orange-d8 py-3 font-bolder uppercase text-white hover:bg-custom-orange-fb xs:py-3 xs:text-lg"
             >
               Add to cart
             </button>
@@ -82,7 +82,7 @@ const ProductDetails = ({ product }) => {
       {/* Features */}
       <div className="md:col-span-2 lg:col-span-1">
         <p className="text-32 mb-8 mt-16 lg:m-0">Features</p>
-        <p className="whitespace-pre-line font-bold leading-[25px] opacity-50 md:mb-10">
+        <p className="whitespace-pre-line font-bold leading-[25px] opacity-50 md:mb-10 lg:mt-4">
           {product.features}
         </p>
       </div>

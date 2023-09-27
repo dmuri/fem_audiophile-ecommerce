@@ -104,7 +104,7 @@ const Cart = () => {
                 </div>
 
                 <button
-                  className="text-13 mt-2 w-full bg-custom-orange-d8 py-3 uppercase text-white"
+                  className="text-13 mt-2 w-full bg-custom-orange-d8 py-3 uppercase text-white hover:bg-custom-orange-fb"
                   aria-label="Navigate home"
                   onClick={() => {
                     setIsOpen(false);

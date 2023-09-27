@@ -14,10 +14,10 @@ const ThankYou = ({ setShowThankYou, cart, formattedGrandTotal }) => {
   }, []);
 
   return (
-    <div className="fixed z-10 inset-0 flex flex-col items-center justify-center bg-[rgba(0,0,0,0.4)]">
-      <div className="md:min-w-[540px] flex flex-col gap-5 bg-white p-12 rounded-lg ">
+    <div className="fixed inset-0 z-10 flex flex-col items-center justify-center bg-[rgba(0,0,0,0.4)]">
+      <div className="flex flex-col gap-5 rounded-lg bg-white p-12 md:min-w-[540px] ">
         <img
-          className="w-12 h-12"
+          className="h-12 w-12"
           src="/assets/checkout/icon-order-confirmation.svg"
           alt=""
         />
@@ -28,37 +28,37 @@ const ThankYou = ({ setShowThankYou, cart, formattedGrandTotal }) => {
           You will receive an email confirmation shortly
         </p>
         <div className="flex flex-col sm:flex-row">
-          <div className="flex-1  bg-gray-200 rounded-t-lg sm:rounded-none sm:rounded-l-lg px-5">
+          <div className="flex-1  rounded-t-lg bg-gray-200 px-5 sm:rounded-none sm:rounded-l-lg">
             {cart.map((product) => (
-              <div className=" flex gap-4 my-4" key={product.slug}>
+              <div className=" my-4 flex gap-4" key={product.slug}>
                 <img
                   className="h-8 w-8 rounded-lg"
                   src={`/assets/cart/image-${product.slug}.jpg`}
                   alt=""
                 />
                 <div className="">
-                  <p className="font-bolder text-md">{product.short}</p>
-                  <p className="font-bolder text-sm opacity-50">
+                  <p className="text-md font-bolder">{product.short}</p>
+                  <p className="text-sm font-bolder opacity-50">
                     $ {product.price}
                   </p>
                 </div>
                 <div className="ml-auto">
-                  <p className="font-bolder opacity-50 text-md">
+                  <p className="text-md font-bolder opacity-50">
                     x{product.quantity}
                   </p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="flex-1 flex flex-row items-center sm:items-start sm:flex-col justify-center py-3 sm:py-0 px-5 gap-1 bg-black rounded-b-lg sm:rounded-none sm:rounded-r-lg">
-            <p className="text-white uppercase opacity-50 ">Grand total</p>
-            <p className="text-white font-bolder text-lg">
+          <div className="flex flex-1 flex-row items-center justify-center gap-1 rounded-b-lg bg-black px-5 py-3 sm:flex-col sm:items-start sm:rounded-none sm:rounded-r-lg sm:py-0">
+            <p className="uppercase text-white opacity-50 ">Grand total</p>
+            <p className="text-lg font-bolder text-white">
               $ {formattedGrandTotal}
             </p>
           </div>
         </div>
 
-        <div className="w-full max-w-[500px] flex justify-center ">
+        <div className="flex w-full max-w-[500px] justify-center ">
           <button
             onClick={
               (() => setShowThankYou(false),
@@ -68,7 +68,7 @@ const ThankYou = ({ setShowThankYou, cart, formattedGrandTotal }) => {
                 });
               })
             }
-            className="bg-custom-orange-d8 text-13 py-3 mt-2 w-full text-white uppercase"
+            className="text-13 mt-2 w-full bg-custom-orange-d8 py-3 uppercase text-white hover:bg-custom-orange-fb"
             aria-label="Navigate home"
           >
             Back to home

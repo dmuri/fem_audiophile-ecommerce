@@ -11,7 +11,7 @@ const CategoryThumbnails = () => {
             className="w-full"
             aria-label="Goto category"
             onClick={() => {
-              navigate(`category/${category}`);
+              navigate(`/category/${category}`);
             }}
           >
             <div className="relative flex min-h-[200px] flex-col items-center justify-end rounded-lg bg-gray-200 ">
