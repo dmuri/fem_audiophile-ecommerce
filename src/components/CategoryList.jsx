@@ -40,6 +40,7 @@ const CategoryList = () => {
                   <img
                     className="transistion overflow-hidden rounded-2xl duration-100 group-hover:scale-105"
                     src={`${product.categoryImage.desktop}`}
+                    alt="product"
                   />
                 </picture>
               </div>

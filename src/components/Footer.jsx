@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="relative mx-auto grid max-w-[70em] grid-cols-1 justify-items-center gap-10 px-2 sm:grid-cols-[1fr_1fr] sm:justify-items-start sm:gap-4 md:gap-10">
       <div className="absolute -top-12 h-[1px] w-24 border-t-4 border-custom-orange-d8"></div>
       <div className="sm:col-span-2 md:col-span-1">
-        <img src="/assets/shared/desktop/logo.svg" alt="" />
+        <img src="/assets/shared/desktop/logo.svg" alt="logo" />
       </div>
 
       <ul className="flex flex-grow flex-col items-center gap-5   text-[13px] font-bolder uppercase tracking-[2px] text-white sm:flex-row sm:gap-3 md:justify-self-end">

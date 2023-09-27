@@ -37,7 +37,7 @@ const ProductSpotlight = () => {
             <img
               className="object-right-center w-full object-cover  md:h-[567px]"
               src="/assets/home/desktop/cropped-image-hero2.jpg"
-              alt="Responsive content"
+              alt="Featured product"
             />
           </picture>
         </div>

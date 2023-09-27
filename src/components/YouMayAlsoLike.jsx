@@ -27,6 +27,7 @@ const YouMayAlsoLike = ({ others }) => {
               <img
                 className="transform rounded-lg duration-100 group-hover:scale-105"
                 srcSet={`${other.image.desktop}`}
+                alt="image of other products you may like"
               />
             </picture>
             <h3 className="text-2xl font-bolder uppercase tracking-[1.7px]">

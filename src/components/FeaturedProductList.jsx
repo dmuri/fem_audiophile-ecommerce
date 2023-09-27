@@ -12,7 +12,7 @@ const FeaturedProductList = () => {
             <img
               className="z-20 mx-auto -mb-2 h-auto w-[200px] px-4 pt-24 transition group-hover:scale-[105%] md:w-[400px]"
               src="/assets/home/desktop/image-speaker-zx9.png"
-              alt="Responsive content"
+              alt="Featured product"
             />
             <svg
               className="absolute -right-[360px] -top-[240px] -z-50 transition duration-100 group-hover:scale-125 md:-right-[280px] md:-top-16 "
@@ -59,7 +59,7 @@ const FeaturedProductList = () => {
           <img
             className="rounded-r-lg transition group-hover:-translate-x-2 group-hover:scale-[105%]"
             src="/assets/home/desktop/image-speaker-zx7.jpg"
-            alt="Responsive content"
+            alt="Featured product"
           />
         </picture>
         <div className="absolute left-[5%] top-[35%] ">
@@ -92,7 +92,7 @@ const FeaturedProductList = () => {
           <img
             className="rounded-lg transition duration-100 group-hover:-translate-x-2 group-hover:scale-105 group-hover:rounded-lg"
             src="/assets/home/desktop/image-earphones-yx1.jpg"
-            alt="Responsive content"
+            alt="Featured product"
           />
         </picture>
         <div className=" flex flex-1 flex-col justify-center gap-8 rounded-lg bg-gray-200 px-4 py-6 md:pl-[10%]">

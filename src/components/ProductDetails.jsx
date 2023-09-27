@@ -34,6 +34,7 @@ const ProductDetails = ({ product }) => {
         <img
           className="mx-auto w-full max-w-[515px] rounded-xl "
           src={`${startUrl}desktop/image-product.jpg`}
+          alt="product"
         />
       </picture>
 

@@ -271,7 +271,7 @@ const Checkout = () => {
                   <img
                     className="h-16 w-16 rounded-lg"
                     src={`/assets/cart/image-${product.slug}.jpg`}
-                    alt=""
+                    alt="Product in cart"
                   />
                   <div className="">
                     <p className="text-lg font-bolder">{product.short}</p>

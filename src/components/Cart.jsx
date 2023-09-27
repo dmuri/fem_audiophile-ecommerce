@@ -62,7 +62,7 @@ const Cart = () => {
                 <img
                   className="h-8 w-8 rounded-lg sm:h-16 sm:w-16"
                   src={`/assets/cart/image-${product.slug}.jpg`}
-                  alt=""
+                  alt="Product in cart"
                 />
                 <div className="">
                   <p className="text-md font-bolder">{product.short}</p>

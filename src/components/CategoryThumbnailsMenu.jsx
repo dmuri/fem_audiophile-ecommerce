@@ -27,7 +27,7 @@ const CategoryThumbnailsMenu = ({ setMobileNavToggle }) => {
                   <img
                     className="absolute w-full max-w-[220px] -translate-y-1/3 transition-transform duration-100 group-hover:scale-110"
                     src={`/assets/shared/desktop/image-category-thumbnail-${category}.png`}
-                    alt=""
+                    alt="category"
                   />
                   <p className="text-18 mb-2 uppercase">{category}</p>
                   <div className="mb-8 flex items-center gap-3">

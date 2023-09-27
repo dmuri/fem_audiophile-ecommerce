@@ -34,7 +34,7 @@ const ThankYou = ({ setShowThankYou, cart, formattedGrandTotal }) => {
                 <img
                   className="h-8 w-8 rounded-lg"
                   src={`/assets/cart/image-${product.slug}.jpg`}
-                  alt=""
+                  alt="image of product"
                 />
                 <div className="">
                   <p className="text-md font-bolder">{product.short}</p>

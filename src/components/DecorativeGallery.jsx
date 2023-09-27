@@ -23,6 +23,7 @@ const ProductDecorativeGallery = ({ slug }) => {
               <img
                 className=""
                 src={`${startUrl}desktop/image-gallery-1.jpg`}
+                alt="decorative pictures"
               />
             </picture>
           </div>
@@ -38,6 +39,7 @@ const ProductDecorativeGallery = ({ slug }) => {
               />
               <img
                 className=""
+                alt="decorative pictures"
                 src={`${startUrl}desktop/image-gallery-2.jpg`}
               />
             </picture>
@@ -54,7 +56,11 @@ const ProductDecorativeGallery = ({ slug }) => {
               media="(max-width: 1024px)"
               srcSet={`${startUrl}tablet/image-gallery-3.jpg`}
             />
-            <img className="" src={`${startUrl}desktop/image-gallery-3.jpg`} />
+            <img
+              alt="decorative pictures"
+              className=""
+              src={`${startUrl}desktop/image-gallery-3.jpg`}
+            />
           </picture>
         </div>
       </div>
