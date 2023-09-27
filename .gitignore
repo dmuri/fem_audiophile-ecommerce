@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # Private
-notes
+*.notes
