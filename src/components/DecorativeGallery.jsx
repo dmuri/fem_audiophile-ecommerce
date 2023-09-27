@@ -1,11 +1,5 @@
 const ProductDecorativeGallery = ({ slug }) => {
   const startUrl = `/assets/product-${slug}/`;
-  const url1 = "/assets/product-xx59-headphones/desktop/image-gallery-1.jpg";
-  console.log(url1);
-  const url2 = "/assets/product-xx59-headphones/desktop/image-gallery-2.jpg";
-  console.log(url2);
-  const url3 = "/assets/product-xx59-headphones/desktop/image-gallery-3.jpg";
-  console.log(url3);
   return (
     <>
       <div className="my-32 flex flex-col gap-2 overflow-hidden sm:flex-row sm:gap-4 md:gap-8">

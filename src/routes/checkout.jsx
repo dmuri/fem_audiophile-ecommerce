@@ -26,7 +26,6 @@ const Checkout = () => {
 
   const [showThankYou, setShowThankYou] = useState(false);
   const onSubmit = (data) => {
-    console.log(data);
     setShowThankYou(true);
   };
 

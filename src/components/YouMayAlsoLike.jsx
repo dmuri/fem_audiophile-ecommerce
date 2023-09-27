@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 const YouMayAlsoLike = ({ others }) => {
   const navigate = useNavigate();
   const url = others[0].image.tablet;
-  console.log(url);
   return (
     <div className=" mb-56 flex flex-col items-center md:mb-44 lg:mb-56">
       <h2 className=" text-2xl font-bolder uppercase md:text-3xl">
