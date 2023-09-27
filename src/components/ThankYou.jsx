@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import useStore from "../store/index.js";
 
 const ThankYou = ({ setShowThankYou, cart, formattedGrandTotal }) => {
   const navigate = useNavigate();
+  const clearCart = useStore((state) => state.clearCart);
 
   //   Prevent scrolling on page behind ThankYou-modal
   useEffect(() => {
@@ -60,14 +62,13 @@ const ThankYou = ({ setShowThankYou, cart, formattedGrandTotal }) => {
 
         <div className="flex w-full max-w-[500px] justify-center ">
           <button
-            onClick={
-              (() => setShowThankYou(false),
-              () => {
-                navigate("/", {
-                  replace: true,
-                });
-              })
-            }
+            onClick={() => {
+              setShowThankYou(false);
+              navigate("/", {
+                replace: true,
+              });
+              clearCart();
+            }}
             className="text-13 mt-2 w-full bg-custom-orange-d8 py-3 uppercase text-white hover:bg-custom-orange-fb"
             aria-label="Navigate home"
           >
