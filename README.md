@@ -38,10 +38,10 @@ Audiophile e-commerce site challenge on frontend mentor.
    ```
 
 3. Run npm install
-
-```sh
-npm install
-```
+   
+   ```sh
+   npm install
+   ```
 
 4. Start the development server
 
