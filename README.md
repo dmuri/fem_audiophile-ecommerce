@@ -37,10 +37,16 @@ Audiophile e-commerce site challenge on frontend mentor.
    cd fem_audiophile-ecommerce
    ```
 
-3. Start the development server
+3. Run npm install
+
+```sh
+npm install
+```
+
+4. Start the development server
 
    ```sh
    npm run dev
    ```
 
-4. Open browser and view localhost:5173
+5. Open browser and view localhost:5173
